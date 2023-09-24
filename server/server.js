@@ -30,7 +30,7 @@ app.get('/hello',(req,res)=>{
 */
 app.get('/budget',(req,res)=>{
 
-    fs.readFile('budget-data.json', 'utf8', (error, data) => {
+    /* fs.readFile('budget-data.json', 'utf8', (error, data) => {
         if (error) {
           console.error(error);
           return res.status(500).send('Error reading budget data.');
@@ -44,8 +44,8 @@ app.get('/budget',(req,res)=>{
           console.error(parseError);
           res.status(500).send('Error parsing budget data.');
         }
-      });
-    //res.json(budget);
+      }); */
+    res.json(budget);
 });
 
 app.listen(port,()=>{
